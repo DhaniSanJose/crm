@@ -12,12 +12,13 @@
             </a>
             <table class="table table-sm">
                 <tr>
-                   
+                    <th></th>
                     <th>Customer</th>
                     <th>Phone</th>
                 </tr>
                 {% for customer in customers  %}
                 <tr>
+                    <td><a href="{% url 'customer' customer.id %}" class="">VIEW</a></td>
                     <td>{{customer.name}}</td>
                     <td>{{customer.phone}}</td>
                 </tr>
@@ -30,7 +31,7 @@
         <h5>LAST 5 ORDERS</h5>
         <hr>
         <div class="card card-body">
-            <a href="" class="btn btn-primary btn-sm btn-block">
+            <a href="{% url 'create_order' %}" class="btn btn-primary btn-sm btn-block">
                 CREATE ORDER
             </a>
             <table class="table table-sm">
@@ -47,7 +48,7 @@
                     <td>{{order.product}}</td>
                     <td>{{order.date_created}}</td>
                     <td>{{order.status}}</td>
-                    <td><a href="" class="btn btn-primary">UPDATE</a></td>
+                    <td><a href="{% url 'update_order' order.id %}" class="btn btn-primary">UPDATE</a></td>
                     <td><a href="" class="btn btn-danger">DELETE</a></td>
                    
                 </tr>
