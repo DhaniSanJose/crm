@@ -1,38 +1,61 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg">
+<style>
+.brand {
+  color: white !important;
+  font-family: 'Poppins';font-size: auto;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+</style>
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img src="{% static './images/earist-logo.png' %}" alt="" width="70" height="70">
-      <a class="navbar-brand" href="#">Navbar</a>
+    
+      <h3 class="brand">EARIST HRIS</h3>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ">
+          {% if request.user.is_staff %}
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">DASHBAORD</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">DASHBOARD</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'products' %}">PRODUCTS</a>
           </li>
-
-
-
-
-
-          
-
-          {% comment %} <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             TIME TABLE
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              EMPLOYEE RECORDS
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">DTR VIEW</a></li>
-              <li><a class="dropdown-item" href="#">CSV UPLOADS</a></li>
-              <li><a class="dropdown-item" href="#">CUT-OFF TIME TABLE</a></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li> {% endcomment %}
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'account' %}">SETTINGS</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
-    </div>
+    
+          <span class="hello-msg"> Hello, {{request.user}}</span>
+        
+       
+       <span><a href="{% url 'logout' %}" class="hello-msg">Logout</a></span>
+      </div>
+     
   </nav>
+          
+
+      
+        
+     
+  

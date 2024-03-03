@@ -1,0 +1,108 @@
+#logo{
+
+}
+#body{
+  background-color: #ebeff5;
+}
+#total-orders{
+  background-color: #4cb3c7;
+
+}
+#orders-delivered{
+  background-color: #7abecc;
+}
+#orders-pending{
+  background-color: #7CD1C0;
+}
+
+.navbar{
+  background-color: maroon; 
+  height: 80px;
+  
+}
+.navbar-text,
+.navbar-brand {
+  color: white !important;
+  font-family: 'Poppins';font-size: 35px;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+  color: white !important;
+  font-family: 'Poppins';font-size: 35px;
+}
+
+.brand {
+  color: white !important;
+  font-family: 'Poppins';font-size: 35px;
+}
+
+.tab {
+   display: inline-block;
+   margin-left: 10px;
+}
+
+.nav-link{
+   transition: all 0.2;
+   color: white;
+   font-family: 'Poppins';font-size: 20px;
+}
+.nav-link:hover{
+color: yellow;
+font-family: 'Poppins';font-size: 20px;
+}
+.hello-msg{
+  color:white;
+  font-family: 'Poppins';font-size: 20px;
+  margin-right: 20px;
+  }
+
+.nav-link::after{
+content: '';
+opacity: 0;
+transition: all 0.2;
+width: 100%;
+background-color: yellow;
+bottom: 0;
+left: 0;
+}
+.navbar-nav .open .dropdown-menu {
+  background-color: maroon !important; 
+  font-family: 'Poppins';font-size: 20px;
+  color: white !important;
+  position: absolute;
+  float: none;
+  width: auto;
+  margin-top: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  left: 0;
+}
+
+.nav-link:hover::after{
+  color: white !important;
+opacity: 0;
+}
+
+.navbar-nav .active {
+   color: yellow !important;
+
+}
+
+.dropdown-menu{
+  background-color: maroon !important; 
+  font-family: 'Poppins';font-size: 20px;
+  color: white !important;
+}
+
+.dropdown-menu .active {
+  color: yellow !important;
+
+}
+.dropdown-item{
+  color: white !important;
+}
+
+.dropdown-item:hover{
+  background-color: maroon !important; 
+  color: yellow !important;
+}
